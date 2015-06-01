@@ -1,4 +1,4 @@
-# Babel plugin for angular projects
+# Babel plugin for angular
 
 ## Install
 
