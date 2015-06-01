@@ -6,49 +6,49 @@
 $ npm install babel babel-core babel-plugin-angular
 ```
 
-```
-angular
-  .module('my.app', ['dep1', 'dep2'])
-  .controller('MyController', MyController);
-
+```js
 function MyController(service1, service2, service3) {
 
 }
-
 MyController.$inject = ['service1', 'service2', 'service3];
+
+angular
+  .module('my.app', ['dep1', 'dep2'])
+  .controller('MyController', MyController);
 ```
 
-```
+```js
 @Inject(['service1', 'service2', 'service3'])
 class MyController {
 
 }
 
-app.registry(MyController);
 angular
   .module('my.app', ['dep1', 'dep2'])
   .controller('MyController', MyController);
+
 ```
 
 ## Use:
 
-```
-$ babel --plugins angular script.js
+```js
+$ babel --stage 0 --plugins angular script.js
 ```
 
 or:
 
 ```js
-require("babel").transform("code", { plugins: ["angular"] });
+require("babel").transform("code", { stage: 0, plugins: ["angular"] });
 ```
 
 with `browserify` / `babelify`:
 
 ```js
 var b = browserify({
-  // browserifyoptions
+  // options
 }).transform(
   babelify.configure({
+    stage: 0,
     plugins: ["angular"]
   })
 );
