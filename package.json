@@ -1,0 +1,20 @@
+{
+  "name": "babel-plugin-angular",
+  "version": "0.1.1",
+  "author": {
+    "name": "Maciej Chmielarski",
+    "email": "m.chmielarski@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchmielarski/babel-plugin-angular.git"
+  },
+  "main": "babel-plugin-angular.js",
+  "scripts": {
+    "build": "make bench"
+  },
+  "dependencies": {
+    "babel-core": "^5.0.0"
+  }
+}
