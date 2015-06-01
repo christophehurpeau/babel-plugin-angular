@@ -6,6 +6,9 @@
 $ npm install babel babel-core babel-plugin-angular
 ```
 
+## Write code
+
+#### before
 ```js
 function MyController(service1, service2, service3) {
 
@@ -16,7 +19,7 @@ angular
   .module('my.app', ['dep1', 'dep2'])
   .controller('MyController', MyController);
 ```
-
+#### now
 ```js
 @Inject(['service1', 'service2', 'service3'])
 class MyController {
@@ -29,19 +32,20 @@ angular
 
 ```
 
-## Use:
+## Use plugin
 
+#### CLI
 ```js
 $ babel --stage 0 --plugins angular script.js
 ```
 
-or:
-
+#### Require hook
 ```js
 require("babel").transform("code", { stage: 0, plugins: ["angular"] });
 ```
 
-with `browserify` / `babelify`:
+
+#### Browserify
 
 ```js
 var b = browserify({
