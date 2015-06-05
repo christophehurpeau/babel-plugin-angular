@@ -13,7 +13,7 @@ $ npm install babel babel-core babel-plugin-angular
 function MyController(service1, service2, service3) {
 
 }
-MyController.$inject = ['service1', 'service2', 'service3];
+MyController.$inject = ['service1', 'service2', 'service3'];
 
 angular
   .module('my.app', ['dep1', 'dep2'])
