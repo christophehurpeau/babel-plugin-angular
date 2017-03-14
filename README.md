@@ -1,5 +1,7 @@
 # Babel plugin for angular
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/christophehurpeau/babel-plugin-angular.svg)](https://greenkeeper.io/)
+
 ## Install
 
 ```
